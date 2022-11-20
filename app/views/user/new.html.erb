@@ -1,11 +1,19 @@
-<h1>Signup!</h1>
+  <header class="page-header">
+    <h1 align="center">Sign up</h1><br>
 
-<%= form_for :user, url: '/user' do |f| %>
-
-  Name: <%= f.text_field :name %>
-  Email: <%= f.text_field :email %>
-  Password: <%= f.password_field :password %>
-  Password Confirmation: <%= f.password_field :password_confirmation %>
-  <%= f.submit "Submit" %>
-
+<div align="center"><%= form_for :user, url: '/user' do |f| %>
+<form>
+  <table>
+    <tr>
+      <td align="right">Name <%= f.text_field :name %></td>
+    </tr>
+    <tr>
+      <td align="right">Email <%= f.text_field :email %></td>
+    </tr>
+    <tr>
+      <td align="right">Password <%= f.password_field :password %></td>
+    </tr>
+  </table><br>
+    <i align="center"><%= f.submit "Submit",  class: "btn btn-outline-success" %></i>
+</form>
 <% end %>
